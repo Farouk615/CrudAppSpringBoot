@@ -1,4 +1,4 @@
-package Models;
+package com.example.CrudApp.Models;
 
 import javax.persistence.*;
 

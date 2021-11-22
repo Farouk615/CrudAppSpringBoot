@@ -1,11 +1,15 @@
-package Services;
+package com.example.CrudApp.Services;
 
-import Models.Employee;
-import Repositories.EmployeeRepository;
+import com.example.CrudApp.Models.Employee;
+import com.example.CrudApp.Repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService{
 
     @Autowired
