@@ -15,12 +15,15 @@
             <th> Employee first name</th>
             <th> Employee last name</th>
             <th>  email</th>
+            <th> Actions </th>
             </thead >
             <tbody>
             <tr th:each="item : ${listEmployees}">
                 <td th:text="${item.name}"> </td>
                 <td th:text="${item.lastName}"> </td>
-                <td th:text="${item.email}"> </td> <!-- Yemchi b esm setter chnwoa-->
+                <td th:text="${item.email}"> </td>  <!-- Yemchi b esm setter chnwoa-->
+                <td> <a th:href="@{/showFormForUpdate/{id}(id=${item.id})}" class="btn btn-warning">Update</a></td>
+                <td> <a th:href="@{/deleteEmployee/{id}(id=${item.id})}" class="btn btn-danger">Delete</a></td>
             </tr>
             </tbody>
         </table>

@@ -9,4 +9,6 @@ import java.util.List;
 public interface EmployeeService {
     List<Employee> getAllEmployees();
     void addEmployee(Employee employee);
+    void deleteEmployee(long id);
+    Employee getEmployeeById(long id);
 }
